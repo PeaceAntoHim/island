@@ -13,7 +13,7 @@
 
 <!-- Section 1: Hero -->
 <section class="max-w-5xl mx-auto p-6">
-    <h1 class="text-3xl md:text-4xl font-[1000] leading-tight tracking-tight">AN INVITATION<br>TO THE HIDDEN</h1>
+    <h1 class="text-3xl md:text-4xl font-black leading-tight tracking-tight">AN INVITATION<br>TO THE HIDDEN</h1>
 
     <div class="flex flex-col full:flex-row mt-6 items-start gap-6">
         <div class="flex-1">
@@ -55,7 +55,7 @@
 
 <!-- Section 2: Behind Closed Doors -->
 <section class="max-w-5xl mx-auto p-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-[1000] leading-tight tracking-tight">BEHIND</h2>
+    <h2 class="text-3xl md:text-4xl font-black leading-tight tracking-tight">BEHIND</h2>
     <p class="font-black">Closed Doors</p>
     <p class="mt-4 text-sm md:text-base leading-relaxed max-w-2xl mx-auto text-gray-800">
         Our speakeasy offers an atmosphere that's both <span class="font-medium">sleek</span> and <span class="font-medium">relaxed</span>,
@@ -116,13 +116,19 @@
     <img id="modalImg" class="max-h-[80%] max-w-[80%] rounded shadow-lg" />
 </div>
 
+<button id="scrollTopBtn"
+        class="hidden fixed bottom-6 right-6 bg-black text-white p-3 rounded-full shadow-lg hover:scale-110 transition">
+    ↑
+</button>
+
+
 <script src="script.js"></script>
 <script>
     tailwind.config = {
         theme: {
             extend: {
                 colors: {
-                    brand: '#1e293b', // example custom color
+                    brand: '#1e293b',
                 },
                 fontFamily: {
                     sans: ['Inter', 'sans-serif'],

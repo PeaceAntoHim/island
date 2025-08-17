@@ -53,3 +53,13 @@ guestlistForm.addEventListener("submit", function(e) {
     showToast("✅ You’ve been added to the guestlist!");
     guestlistForm.reset();
 });
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.remove("hidden");
+    } else {
+        scrollBtn.classList.add("hidden");
+    }
+});
+scrollBtn.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
