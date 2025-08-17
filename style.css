@@ -1,0 +1,24 @@
+/* Animation for modal gallery image */
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes zoomOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.9); }
+}
+.modal-animate-in {
+    animation: zoomIn 0.3s ease forwards;
+}
+.modal-animate-out {
+    animation: zoomOut 0.3s ease forwards;
+}
+
+/* Animation for toast */
+.animate-fade-in {
+    animation: fadeInUp 0.5s ease;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

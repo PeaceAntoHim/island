@@ -1,13 +1,30 @@
 function openModal(image) {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImg');
-    modal.classList.remove('hidden');
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+
+    modal.classList.remove("hidden");
     modalImg.src = image.src;
+
+    // reset animation
+    modalImg.classList.remove("modal-animate-out");
+    void modalImg.offsetWidth; // trick to re-trigger animation
+    modalImg.classList.add("modal-animate-in");
 }
 
 function closeModal() {
-    document.getElementById('imageModal').classList.add('hidden');
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+
+    // play zoom out
+    modalImg.classList.remove("modal-animate-in");
+    modalImg.classList.add("modal-animate-out");
+
+    // wait until animation ends before hiding
+    modalImg.addEventListener("animationend", () => {
+        modal.classList.add("hidden");
+    }, { once: true });
 }
+
 
 function openGuestlist() {
     document.getElementById("guestlistModal").classList.remove("hidden");
