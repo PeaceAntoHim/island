@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitation to the Hidden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-white text-black font-sans">
+
+<!-- Section 1: Hero -->
+<section class="max-w-5xl mx-auto p-6">
+    <h1 class="text-3xl md:text-4xl font-[1000] leading-tight tracking-tight">AN INVITATION<br>TO THE HIDDEN</h1>
+
+    <div class="flex flex-col full:flex-row mt-6 items-start gap-6">
+        <div class="flex-1">
+            <img src="./assets/hero.png" alt="Hero Image" class="w-full object-cover rounded" />
+        </div>
+        <div class="flex-1">
+            <div class="flex flex-col md:flex-row md:items-start md:space-x-8 text-left">
+
+                <!-- Column 1 -->
+                <div class="md:w-auto">
+                    <p class="text-sm uppercase font-bold tracking-wide">Curated Selection of</p>
+                    <p class="text-xl uppercase md:text-2xl font-black tracking-tight">
+                        Fine Spirits
+                    </p>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="md:w-auto">
+                    <p class="text-sm font-bold uppercase tracking-wide">A Hidden Gem</p>
+                    <p class="text-xl uppercase md:text-2xl font-black tracking-tight">
+                        7 Nights / Week
+                    </p>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="md:flex-1">
+                    <p class="text-sm leading-relaxed">
+                        Step into a place where time slows down and the night feels endless.
+                        Our speakeasy offers a unique, intimate atmosphere, perfect for those
+                        seeking something more than the usual.
+                        <span class="italic">Come for the experience, stay for the vibe.</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Behind Closed Doors -->
+<section class="max-w-5xl mx-auto p-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-[1000] leading-tight tracking-tight">BEHIND</h2>
+    <p class="font-black">Closed Doors</p>
+    <p class="mt-4 text-sm md:text-base leading-relaxed max-w-2xl mx-auto text-gray-800">
+        Our speakeasy offers an atmosphere that's both <span class="font-medium">sleek</span> and <span class="font-medium">relaxed</span>,
+        perfect for those who appreciate the <span class="font-medium">finer things</span> in life.
+        Whether you're here for a quiet drink or to linger into the night,
+        every moment feels <span class="font-medium">exclusive</span>.
+    </p>
+</section>
+
+<!-- Section 3: Gallery -->
+<section class="max-w-5xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <img src="./assets/img1.png" alt="" class="cursor-pointer hover:opacity-80 transition" onclick="openModal(this)">
+    <img src="./assets/img2.png" alt="" class="cursor-pointer hover:opacity-80 transition" onclick="openModal(this)">
+    <img src="./assets/img3.png" alt="" class="cursor-pointer hover:opacity-80 transition" onclick="openModal(this)">
+    <img src="./assets/img4.png" alt="" class="cursor-pointer hover:opacity-80 transition" onclick="openModal(this)">
+    <img src="./assets/img5.png" alt="" class="cursor-pointer hover:opacity-80 transition" onclick="openModal(this)">
+    <img src="./assets/img6.png" alt="" class="cursor-pointer hover:opacity-80 transition" onclick="openModal(this)">
+</section>
+
+<!-- Guestlist Button -->
+<div class="text-center p-6">
+    <button class="px-6 py-2 bg-black text-white uppercase tracking-wide hover:bg-gray-800 transition">
+        Guestlist
+    </button>
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+    <span class="absolute top-4 right-6 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <img id="modalImg" class="max-h-[80%] max-w-[80%] rounded shadow-lg" />
+</div>
+
+<script src="script.js"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: '#1e293b', // example custom color
+                },
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                },
+            }
+        }
+    }
+</script>
+</body>
+</html>
